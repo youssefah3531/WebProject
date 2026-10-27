@@ -45,8 +45,7 @@
                     </select>
                 </div>
 
-                <button class="primary-button" type="submit">Log In</button>
-                <p class="form-message" id="loginMessage" role="status" aria-live="polite"></p>
+                <button href="index.html" class="primary-button" type="submit">Log In</button>
             </form>
 
             <p class="switch-page">Don't have an account? <a href="signup.html">Create one</a></p>
@@ -58,24 +57,16 @@
         <p>© 2026 The Library. All rights reserved.</p>
     </footer>
 
-    <script>
-        const loginForm = document.getElementById("loginForm");
-        const loginMessage = document.getElementById("loginMessage");
-        const accountType = document.getElementById("accountType");
+<script>
+    const loginForm = document.getElementById("loginForm");
 
-        loginForm.addEventListener("submit", function (event) {
-            event.preventDefault();
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        window.location.href = "index.html";
+    });
+</script>
 
-            if (accountType.value === "Guest") {
-                loginMessage.textContent =
-                    "Guest mode selected. Real guest access needs to be connected to the project.";
-            } else {
-                loginMessage.textContent =
-                    "Demo only: the form is valid, but credentials are not being checked.";
-            }
-
-            loginMessage.className = "form-message success";
-        });
-    </script>
+   
 </body>
+
 </html>

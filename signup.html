@@ -71,26 +71,24 @@
         <p>© 2026 The Library. All rights reserved.</p>
     </footer>
 
-    <script>
-        const signupForm = document.getElementById("signupForm");
-        const signupMessage = document.getElementById("signupMessage");
+   
+<script>
+    const signupForm = document.getElementById("signupForm");
 
-        signupForm.addEventListener("submit", function (event) {
-            event.preventDefault();
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirmPassword").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
 
-            if (password !== confirmPassword) {
-                signupMessage.textContent = "Passwords do not match. Please try again.";
-                signupMessage.className = "form-message error";
-                return;
-            }
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
 
-            signupMessage.textContent =
-                "Demo only: your form looks good, but no account has been saved.";
-            signupMessage.className = "form-message success";
-        });
-    </script>
+        window.location.href = "index.html";
+    });
+</script>
+
 </body>
 </html>
