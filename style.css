@@ -314,3 +314,131 @@ a:hover{
         font-size: 30px;
     }
 }
+
+/* ===== Added styles for Ahmed's Books page ===== */
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.search-container input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #2563eb;
+}
+
+.search-container button {
+    padding: 12px 20px;
+    background-color: #e6c98a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #f0d9a5;
+}
+
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.filter-container label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.filter-container select {
+    width: 220px;
+    padding: 12px;
+    border: 2px solid rgb(134, 148, 159);
+    border-radius: 8px;
+    background-color: #182c3b;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-container select:focus {
+    outline: none;
+    border-color: #e6c98a;
+}
+
+.filter-container select option {
+    background-color: #182c3b;
+    color: #ffffff;
+}
+
+
+.cards {
+    height: 500px;
+    margin-top: 130px;
+    display:flex;
+    padding:0 250px;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    height: 400px;
+    width:280px;
+    border:solid 10px;
+    border-radius: 30px;
+    border-color: rgb(134, 148, 159);
+    background-color: #182c3b;
+    text-align: center;
+    color:#ffffff;
+    font-size: 35px;
+    padding-top: 80px;
+    font-weight: 900;
+}
+
+.book-card .name {
+    padding-top: 150px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.book-card .author {
+    padding-top: 10px;
+    font-size: 16px;
+    color: #c9c5c5;
+    margin-bottom: 50px;
+}
+
+.book-card a {
+    background-color:#e6c98a ;
+    text-decoration: none;
+    color: #182c3b;
+    font-weight: 900;
+    margin-top: 150px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.book-card a:hover {
+    background-color: #f0d9a5;
+}
+
