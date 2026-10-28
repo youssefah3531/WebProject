@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">Book Store</a>
+            <ul class="Links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-card">
+            <h1>Create an Account</h1>
+            <p class="intro">Create your library account to explore and borrow books.</p>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName"
+                           placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"
+                           placeholder="At least 8 characters" minlength="8"
+                           autocomplete="new-password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                           placeholder="Enter your password again" minlength="8"
+                           autocomplete="new-password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="User" selected>User</option>
+                        <option value="Admin">Admin (prototype)</option>
+                    </select>
+                    <small>Account type is for demonstration only in this prototype.</small>
+                </div>
+
+                <button class="primary-button" type="submit">Create Account</button>
+                <p class="form-message" id="signupMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="switch-page">Already have an account? <a href="login.html">Log in</a></p>
+            <a class="back-link" href="index.html">← Back to Home</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 The Library. All rights reserved.</p>
+    </footer>
+
+   
+<script>
+    const signupForm = document.getElementById("signupForm");
+
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        window.location.href = "index.html";
+    });
+</script>
+
+</body>
+</html>
