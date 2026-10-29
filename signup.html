@@ -17,12 +17,12 @@
         </nav>
     </header>
 
-    <main class="auth-page">
+    <main class="auth-page" >
         <section class="auth-card">
             <h1>Create an Account</h1>
             <p class="intro">Create your library account to explore and borrow books.</p>
 
-            <form id="signupForm">
+            <form id="signupForm" action="index.html" method="get">
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName"
@@ -59,7 +59,6 @@
                 </div>
 
                 <button class="primary-button" type="submit">Create Account</button>
-                <p class="form-message" id="signupMessage" role="status" aria-live="polite"></p>
             </form>
 
             <p class="switch-page">Already have an account? <a href="login.html">Log in</a></p>
@@ -68,27 +67,9 @@
     </main>
 
     <footer class="site-footer">
-        <p>© 2026 The Library. All rights reserved.</p>
+        <p>© 2026 Book Store. All rights reserved.</p>
     </footer>
 
-   
-<script>
-    const signupForm = document.getElementById("signupForm");
-
-    signupForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-
-        if (password !== confirmPassword) {
-            alert("Passwords do not match!");
-            return;
-        }
-
-        window.location.href = "index.html";
-    });
-</script>
 
 </body>
 </html>

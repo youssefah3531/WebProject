@@ -23,8 +23,7 @@
             <h1>Log In</h1>
             <p class="intro">Log in to continue exploring the library.</p>
 
-            <form id="loginForm">
-                <div class="form-group">
+            <form id="loginForm" action="index.html" method="get">                <div class="form-group">
                     <label for="email" >Email Address</label>
                     <input type="email" id="email" name="email"
                            placeholder="you@example.com" autocomplete="email" required>
@@ -45,7 +44,7 @@
                     </select>
                 </div>
 
-                <button href="index.html" class="primary-button" type="submit">Log In</button>
+                <button class="primary-button" type="submit">Log In</button>
             </form>
 
             <p class="switch-page">Don't have an account? <a href="signup.html">Create one</a></p>
@@ -57,14 +56,7 @@
         <p>© 2026 The Library. All rights reserved.</p>
     </footer>
 
-<script>
-    const loginForm = document.getElementById("loginForm");
 
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        window.location.href = "index.html";
-    });
-</script>
 
    
 </body>

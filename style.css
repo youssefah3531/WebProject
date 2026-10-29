@@ -301,16 +301,4 @@ a:hover{
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    .auth-page {
-        padding: 28px 14px;
-    }
 
-    .auth-card {
-        padding: 25px 20px;
-    }
-
-    .auth-card h1 {
-        font-size: 30px;
-    }
-}
