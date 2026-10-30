@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Borrowed Books | Library</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">Book Store</a>
+            <ul class="Links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="my-books.html">My Books</a></li>
+                <li><a href="login.html" class="signup">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mybooks-page">
+        <h1>My Borrowed Books</h1>
+        <p class="mybooks-intro">Here are the books you borrowed. Return a book when you finish reading it.</p>
+
+        <div class="state-switch">
+            <span>Prototype view:</span>
+            <button type="button" id="showListBtn">Books list</button>
+            <button type="button" id="showEmptyBtn">Empty state</button>
+        </div>
+
+        <p class="action-message" id="returnMessage" hidden></p>
+
+        <section id="borrowedList" class="borrowed-list">
+
+            <article class="borrowed-item">
+                <div class="borrowed-cover">Programming 1</div>
+                <div class="borrowed-info">
+                    <h2>Programming 1</h2>
+                    <p class="borrowed-author">Youssef Ahmed</p>
+                    <p class="borrowed-meta">Category: Programming</p>
+                    <p class="borrowed-meta">Borrowed on: 20 Oct 2026</p>
+                    <p>Status: <span class="status borrowed">Borrowed</span></p>
+                </div>
+                <div class="borrowed-actions">
+                    <button type="button" class="return-btn">Return Book</button>
+                    <a class="secondary-link" href="book-details.html">Book details</a>
+                </div>
+            </article>
+
+            <article class="borrowed-item">
+                <div class="borrowed-cover">Data Structures</div>
+                <div class="borrowed-info">
+                    <h2>Data Structures</h2>
+                    <p class="borrowed-author">Mohamed Hossam</p>
+                    <p class="borrowed-meta">Category: Computer Science</p>
+                    <p class="borrowed-meta">Borrowed on: 24 Oct 2026</p>
+                    <p>Status: <span class="status borrowed">Borrowed</span></p>
+                </div>
+                <div class="borrowed-actions">
+                    <button type="button" class="return-btn">Return Book</button>
+                    <a class="secondary-link" href="book-details.html">Book details</a>
+                </div>
+            </article>
+
+            <article class="borrowed-item">
+                <div class="borrowed-cover">Database</div>
+                <div class="borrowed-info">
+                    <h2>Database</h2>
+                    <p class="borrowed-author">Amr Osama</p>
+                    <p class="borrowed-meta">Category: Database</p>
+                    <p class="borrowed-meta">Borrowed on: 27 Oct 2026</p>
+                    <p>Status: <span class="status borrowed">Borrowed</span></p>
+                </div>
+                <div class="borrowed-actions">
+                    <button type="button" class="return-btn">Return Book</button>
+                    <a class="secondary-link" href="book-details.html">Book details</a>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Empty state: shown when there are no borrowed books -->
+        <section id="emptyState" class="empty-state" hidden>
+            <h2>You have no borrowed books</h2>
+            <p>When you borrow a book, it will appear here.</p>
+            <div class="empty-links">
+                <a class="primary-link" href="books.html">Browse the Books Catalogue</a>
+                <a class="secondary-link" href="index.html">Back to Home</a>
+            </div>
+        </section>
+
+        <p class="catalogue-link">
+            <a href="books.html">Back to Books Catalogue</a>
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 The Library. All rights reserved.</p>
+    </footer>
+
+<script>
+    const borrowedList = document.getElementById("borrowedList");
+    const emptyState = document.getElementById("emptyState");
+    const returnMessage = document.getElementById("returnMessage");
+    const items = document.querySelectorAll(".borrowed-item");
+
+    // how many books are still borrowed
+    let remaining = items.length;
+
+    for (let i = 0; i < items.length; i++) {
+        const returnBtn = items[i].querySelector(".return-btn");
+
+        returnBtn.addEventListener("click", function () {
+            const title = items[i].querySelector("h2").textContent;
+            const status = items[i].querySelector(".status");
+
+            status.textContent = "Returned";
+            status.className = "status available";
+
+            returnBtn.textContent = "Returned";
+            returnBtn.disabled = true;
+
+            returnMessage.textContent = title + " was returned successfully.";
+            returnMessage.hidden = false;
+
+            remaining = remaining - 1;
+            if (remaining === 0) {
+                emptyState.hidden = false;
+            }
+        });
+    }
+
+    document.getElementById("showEmptyBtn").addEventListener("click", function () {
+        borrowedList.style.display = "none";
+        returnMessage.hidden = true;
+        emptyState.hidden = false;
+    });
+
+    document.getElementById("showListBtn").addEventListener("click", function () {
+        borrowedList.style.display = "flex";
+        emptyState.hidden = remaining !== 0;
+    });
+</script>
+
+</body>
+
+</html>

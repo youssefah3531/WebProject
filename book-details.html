@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Details | Library</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">Book Store</a>
+            <ul class="Links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="my-books.html">My Books</a></li>
+                <li><a href="login.html" class="signup">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="details-page">
+
+        <a class="back-link-page" href="books.html">Back to Books</a>
+
+        <!-- Available book: Borrow button works -->
+        <article class="details-card" id="availableBook">
+            <div class="details-cover">Programming 1</div>
+
+            <div class="details-info">
+                <h1>Programming 1</h1>
+                <p class="details-author">by Youssef Ahmed</p>
+
+                <dl class="details-list">
+                    <dt>Category</dt>
+                    <dd>Programming</dd>
+                    <dt>Status</dt>
+                    <dd><span class="status available" id="availableStatus">Available</span></dd>
+                </dl>
+
+                <h2>Description</h2>
+                <p class="details-desc">
+                    An introduction to programming for beginners. The book explains variables,
+                    conditions, loops and functions step by step, with simple examples and
+                    exercises at the end of every chapter.
+                </p>
+
+                <div class="details-actions">
+                    <button type="button" class="borrow-btn" id="borrowBtn">Borrow</button>
+                    <a class="secondary-link" href="my-books.html">View My Books</a>
+                </div>
+
+                <p class="action-message" id="borrowMessage" hidden></p>
+            </div>
+        </article>
+
+        <h2 class="demo-title">Example: a book that is already borrowed</h2>
+
+        <!-- Borrowed book: button is disabled and a message explains why -->
+        <article class="details-card" id="borrowedBook">
+            <div class="details-cover">Algorithms</div>
+
+            <div class="details-info">
+                <h2 class="details-title">Algorithms</h2>
+                <p class="details-author">by Mostafa Ahmed</p>
+
+                <dl class="details-list">
+                    <dt>Category</dt>
+                    <dd>Computer Science</dd>
+                    <dt>Status</dt>
+                    <dd><span class="status borrowed">Borrowed</span></dd>
+                </dl>
+
+                <h2>Description</h2>
+                <p class="details-desc">
+                    A clear guide to the most important algorithms: searching, sorting and
+                    graph basics, explained with diagrams and short code samples.
+                </p>
+
+                <div class="details-actions">
+                    <button type="button" class="borrow-btn" disabled>Not available</button>
+                    <a class="secondary-link" href="books.html">Browse other books</a>
+                </div>
+
+                <p class="action-message warning">
+                    This book is currently borrowed by another reader, so it cannot be borrowed now.
+                    Please check again later or choose another book.
+                </p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 The Library. All rights reserved.</p>
+    </footer>
+
+<script>
+    const borrowBtn = document.getElementById("borrowBtn");
+    const availableStatus = document.getElementById("availableStatus");
+    const borrowMessage = document.getElementById("borrowMessage");
+
+    borrowBtn.addEventListener("click", function () {
+        availableStatus.textContent = "Borrowed";
+        availableStatus.className = "status borrowed";
+
+        borrowBtn.textContent = "Borrowed";
+        borrowBtn.disabled = true;
+
+        borrowMessage.textContent = "Done! This book was added to your borrowed books. You can see it in My Books.";
+        borrowMessage.hidden = false;
+    });
+</script>
+
+</body>
+
+</html>
