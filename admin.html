@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ِAdmin Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Book Store</a>
+            <ul class="Links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+<main class="dashboard">
+    <h1>Books List</h1>
+    
+    <div class="controls">
+        <input type="search" placeholder="Search books...">
+        <a href="add-book.html" class="add-btn"> Add New Book +</a>
+    </div>
+
+    <div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book name</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td>#1001</td>
+                    <td>Clean Code</td>
+                    <td>Programming</td>
+                    <td>Robert C. Martin</td>
+                    <td><span class="available">Available</span></td>
+                    <td>
+                        <a href="add-book.html">Edit</a>
+                        <button type="button">Delete</button>
+                    </td>
+            </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>Atomic Habits</td>
+                    <td>Self-help</td>
+                    <td>James Clear</td>
+                    <td><span class="borrowed">Borrowed</span></td>
+                    <td>
+                        <a href="add-book.html">Edit</a>
+                        <button type="button">Delete</button>
+                    </td>
+            </tr>
+        <tr>
+                    <td>#1003</td>
+                    <td>The Hobbit</td>
+                    <td>Fantasy</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td><span class="borrowed">Borrowed</span></td>
+                    <td>
+                        <a href="add-book.html">Edit</a>
+                        <button type="button">Delete</button>
+                    </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</main>
+</body>
+
+</html>

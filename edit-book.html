@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ِAdmin Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Book Store</a>
+            <ul class="Links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+<main class="add-main">
+
+    <div class="add-card">
+
+        <h2>Edit the book</h2>
+        <p>Fill in the book information below</p>
+
+        <form>
+
+            <div class="form-content">
+
+                <div class="book-info">
+
+                    <label>Book Title</label>
+                    <input type="text" placeholder="Enter book title">
+
+                    <label>Author</label>
+                    <input type="text" placeholder="Enter author name">
+
+                    <label>Category</label>
+                    <input type="text" placeholder="Enter category">
+
+                    <label>Description</label>
+                    <textarea placeholder="Write book description"></textarea>
+
+                </div>
+
+                <div class="book-cover">
+
+                    <label>Book Cover</label>
+
+                    <div class="image-box">
+                        <span>Choose an image</span>
+                    </div>
+
+                    <input type="file" accept="image/*">
+
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <a href="admin.html">Cancel</a>
+                <button type="submit">Update</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+</body>
+
+</html>
