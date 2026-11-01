@@ -301,20 +301,6 @@ a:hover{
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    .auth-page {
-        padding: 28px 14px;
-    }
-
-    .auth-card {
-        padding: 25px 20px;
-    }
-
-    .auth-card h1 {
-        font-size: 30px;
-    }
-}
-
 /* ===== Added styles for Ahmed's Books page ===== */
 
 
@@ -579,41 +565,6 @@ a:hover{
     margin-bottom: 4px;
 }
 
-@media (max-width: 800px) {
-    .details-card {
-        flex-direction: column;
-        align-items: center;
-        padding: 25px 20px;
-    }
-
-    .book-cover {
-        width: 220px;
-        height: 300px;
-        font-size: 24px;
-    }
-
-    .details-info {
-        width: 100%;
-    }
-
-    .details-info h1 {
-        font-size: 30px;
-    }
-
-    .meta-row {
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .meta-row dt {
-        width: auto;
-    }
-
-    .borrow-button {
-        width: 100%;
-    }
-}
-
 
 /* ===== My Borrowed Books page (my-books.html) omar ===== */
 
@@ -771,11 +722,6 @@ a:hover{
     color: gold;
 }
 
-@media (max-width: 700px) {
-    .my-books-page .page-title {
-        font-size: 32px;
-    }
-}
 /* ===== Added styles for moataz's admin page ===== */
 
 .dashboard {
@@ -941,13 +887,13 @@ a:hover{
     width: 70%;
 }
 
-.book-cover {
+.add.book-cover {
     width: 30%;
 }
 
 
 .book-info label,
-.book-cover label {
+.add-book-cover label {
     display: block;
     margin-bottom: 8px;
 }
