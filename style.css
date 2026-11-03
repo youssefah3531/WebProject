@@ -158,6 +158,50 @@ a:hover{
 .suggested .book3 a:hover{
     background-color: #f0d9a5;
 }
+footer{
+    background-color: #182c3b;
+    margin-top: 100px;
+}
+.foot{
+    padding: auto auto;
+    margin: auto auto;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+}
+.logofoot{
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight:800;
+    font-size:30px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 30px;
+}
+.contact{
+    display: flex;
+    gap:20px;
+    padding-right: 50px;
+}
+.contact p{
+    color:#ffffff;
+    font-size: 30px;
+    font-weight: 900;
+}
+.foot .contact a{
+    background-color:#e6c98a ;
+    text-decoration: none;
+    color: #182c3b;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+.contact a:hover{
+    background-color: #f0d9a5;
+}
 
 
 /* ===== Added styles for Muhammad's Login and Sign Up pages ===== */
