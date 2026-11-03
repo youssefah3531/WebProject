@@ -49,7 +49,14 @@
                            autocomplete="new-password" required>
                 </div>
 
-                
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="User" selected>User</option>
+                        <option value="Admin">Admin (prototype)</option>
+                    </select>
+                    <small>Account type is for demonstration only in this prototype.</small>
+                </div>
 
                 <button class="primary-button" type="submit">Create Account</button>
             </form>
@@ -59,8 +66,16 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>© 2026 Book Store. All rights reserved.</p>
+        <footer>
+        <div class="foot">
+            <a href="index.html" class="logofoot">Book Store</a>
+            <div class="contact">
+                <p>contact us: </p>
+                <a href="http://www.facebook.com">Facebook</a>
+                <a href="mailto:youssefah3531@gmail.com">Gmail</a>
+            </div>
+            
+        </div>
     </footer>
 
 
